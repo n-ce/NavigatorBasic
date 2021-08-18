@@ -1,31 +1,28 @@
 html{
   height:100vh;
-  background-color: black;
   align-items: center;
 }
-body{
-  height:100vw;
-  width:100vw;
+html,body{
+  display:flex;
+  justify-content: center;
   flex-direction: column;
 }
-html,body{display:flex;justify-content: center;}
-span{color:red;}
+span{
+  color:red;
+  margin: 1rem;
+}
 #Point{
   height:1rem;
   width:1rem;
-  margin: 1rem 0 0 1rem;
   background-color: red;
 }
 footer{
-  display: flex;
-  height:10%;
+  display: grid;
+  grid-template-columns: auto auto;
   justify-content: center;
 }
-b{
-  width:50%;
-  margin: 1rem 0.5rem 0 0.5rem;
-  text-align: center;
-}
+
+.material-icons-outlined.fs5{font-size: 5rem;}
 @media (orientation:landscape){
   body{
     height:100vh;

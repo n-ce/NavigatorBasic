@@ -5,23 +5,21 @@ document.getElementById('left').onclick = function() {
   x++;
   p.transform = "translate(" + -x+"rem,"+-y + "rem)";
   return x;
-  return y;
 }
 document.getElementById('right').onclick = function() {
   x--;
   p.transform = "translate(" + -x+"rem,"+-y + "rem)";
   return x;
-  return y;
 }
 document.getElementById('up').onclick = function() {
   y++;
   p.transform = "translate(" + -x+"rem,"+-y+ "rem)";
   return y;
-  return x;
 }
 document.getElementById('down').onclick = function() {
   y--;
   p.transform = "translate(" + -x+"rem,"+-y + "rem)";
   return y;
-  return x;
 }
+document.body.addEventListener("click", function(){
+  document.querySelector('h3').innerHTML=x+","+y;});

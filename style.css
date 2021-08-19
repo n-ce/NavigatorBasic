@@ -26,7 +26,7 @@ span{
 
 footer{
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto auto auto auto;
   justify-content: center;
 }
 
@@ -34,7 +34,7 @@ h3{animation: fade 2s infinite;}
 
 @keyframes fade{50%{transform: translateX(-0.5rem)}}
 
-.material-icons-outlined.fs4{font-size: 4rem;}
+.material-icons.fs4{font-size: 4rem;}
 
 @media (orientation:landscape){
   body{
@@ -42,3 +42,25 @@ h3{animation: fade 2s infinite;}
     width:100vh;
   }
 }
+.arrow {
+  border: solid red;
+  border-width: 0 0.5rem 0.5rem 0;
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.right{transform: rotate(-45deg);}
+
+.left{transform: rotate(135deg);}
+
+.up {transform: rotate(-135deg);}
+
+.down {
+  position: relative;
+  bottom:0.5rem;
+  transform: rotate(45deg);
+}
+.upleft {transform: rotate(180deg);}
+.upright {transform: rotate(-90deg);}
+.downleft {transform: rotate(90deg);}
+.downright {transform: rotate(0deg);}

@@ -1,24 +1,14 @@
-var p = document.getElementById('Point').style;
 var x=0;
 var y=0;
-function right() {
-  x++;
-  p.transform = "translate(" + x+"rem,"+-y + "rem)";
-  return x;
+function right() {x++;}
+function left() {x--;}
+function up() {y++;}
+function down() {y--;}
+function upleft() {y++;x--;}
+function upright() {y++;x++;}
+function downleft() {y--;x--;}
+function downright() {y--;x++;}
+document.body.onclick = function(){
+  document.querySelector('#Point').style.transform = "translate(" + x+"rem,"+-y + "rem)";
+  document.querySelector('h3').innerHTML=x+","+y;
 }
-function left() {
-  x--;
-  p.transform = "translate(" + x+"rem,"+-y + "rem)";
-  return x;
-}
-function up() {
-  y++;
-  p.transform = "translate(" + x+"rem,"+-y+ "rem)";
-  return y;
-}
-function down() {
-  y--;
-  p.transform = "translate(" + x+"rem,"+-y + "rem)";
-  return y;
-}
-document.body.onclick = function(){document.querySelector('h3').innerHTML=x+","+y;}

@@ -1,6 +1,10 @@
 html{
   height:100vh;
 }
+h1,p,span,footer,div,pre{animation:cool 1s;}
+@keyframes cool{
+  0%{transform: translateX(-100vw);}
+}
 html,body{
   display:flex;
   justify-content: center;

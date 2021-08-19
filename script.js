@@ -9,6 +9,6 @@ function upright() {y++;x++;}
 function downleft() {y--;x--;}
 function downright() {y--;x++;}
 document.body.onclick = function(){
-  document.querySelector('#Point').style.transform = "translate(" + x+"rem,"+-y + "rem)";
-  document.querySelector('h3').innerHTML=x+","+y;
+  document.querySelector('b').style.transform = "translate(" +2*x+"rem,"+2*-y + "rem)";
+  document.querySelector('h4').innerHTML=x+","+y;
 }

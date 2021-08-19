@@ -1,8 +1,12 @@
-html{height:100vh;user-select: none;}
-
-h1,p,span,footer,div,pre{animation:cool 1s;}
-
-@keyframes cool{0%{transform: translateX(-100vw);}}
+html{
+  height:100vh;
+  user-select: none;
+  animation: curtain 2s ease;
+  background-size: 2rem 2rem;
+  background-image:
+    linear-gradient(to right, #00000040 0.02rem, transparent 0.02rem),
+    linear-gradient(to bottom, #00000040 0.02rem, transparent 0.02rem);
+}
 
 html,body{
   display:flex;
@@ -10,13 +14,11 @@ html,body{
   flex-direction: column;
   align-items: center;
 }
-
-span{margin: 1rem;}
-
-#Point{
+b{
   height:1rem;
   width:1rem;
-  background-color: red;
+  border: 0.1rem solid red;
+  border-radius: 50%;
   transition: transform 0.5s ease-in-out;
 }
 
@@ -25,23 +27,28 @@ footer{
   grid-template-columns: auto auto auto;
   justify-content: center;
 }
-
-h3{animation: fade 2s infinite;}
-a,h3{color:green;}
-@keyframes fade{50%{transform: translateX(-0.5rem)}}
-
-.material-icons.fs4{font-size: 4rem;}
-
-@media (orientation:landscape){
-  body{
-    height:100vh;
-    width:100vh;
-  }
+/*Responsive*/
+@media (orientation:landscape){body{width:100vh;}}
+/*Animations*/
+@keyframes curtain{
+  0%{background-color: black;}
 }
-.arrow {
-  border: solid red;
+h1,p,pre{animation:cool 1s;}
+
+@keyframes cool{0%{transform: translateX(-100vw);}}
+
+span{animation: flexy 1s;}
+
+@keyframes flexy{0%{transform: translateX(100vw)}}
+
+h4{animation: fade 2s infinite;}
+
+@keyframes fade{50%{transform: translateX(-0.5rem)}}
+/*Arrow Icon*/
+span {
+  margin: 1rem;
+  border: solid;
   border-width:0 0.5rem 0.5rem 0;
-  display: inline-block;
   padding: 0.5rem;
 }
 .right{transform: rotate(-45deg)}
